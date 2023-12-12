@@ -1,0 +1,13 @@
+{
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Carlos Jourdan",
+  "copyright_year": "2023",
+  "development_status": "Development Status :: 1 - Planning",
+  "email": "17554676+carlosjourdan@users.noreply.github.com",
+  "friendly_name": "Hypermodern Python Test",
+  "github_user": "carlosjourdan",
+  "license": "MIT",
+  "package_name": "hypermodern_python_test",
+  "project_name": "hypermodern-python-test",
+  "version": "0.0.0"
+}
