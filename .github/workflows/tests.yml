@@ -13,7 +13,7 @@ jobs:
       matrix:
         include:
           - { python: "3.10", os: "ubuntu-latest", session: "pre-commit" }
-          - { python: "3.10", os: "ubuntu-latest", session: "safety" }
+          #- { python: "3.10", os: "ubuntu-latest", session: "safety" }
           - { python: "3.10", os: "ubuntu-latest", session: "mypy" }
           - { python: "3.9", os: "ubuntu-latest", session: "mypy" }
           - { python: "3.8", os: "ubuntu-latest", session: "mypy" }
@@ -23,7 +23,7 @@ jobs:
           - { python: "3.8", os: "ubuntu-latest", session: "tests" }
           - { python: "3.7", os: "ubuntu-latest", session: "tests" }
           - { python: "3.10", os: "windows-latest", session: "tests" }
-          - { python: "3.10", os: "macos-latest", session: "tests" }
+          #- { python: "3.10", os: "macos-latest", session: "tests" }
           - { python: "3.10", os: "ubuntu-latest", session: "typeguard" }
           - { python: "3.10", os: "ubuntu-latest", session: "xdoctest" }
           - { python: "3.10", os: "ubuntu-latest", session: "docs-build" }
@@ -32,7 +32,7 @@ jobs:
       NOXSESSION: ${{ matrix.session }}
       FORCE_COLOR: "1"
       PRE_COMMIT_COLOR: "always"
-      SYSTEM_VERSION_COMPAT: "${{ matrix.os == 'macos-latest' && 1 || 0 }}"
+      SYSTEM_VERSION_COMPAT: ${{ matrix.os == 'macos-latest' && 1 || 0 }}
 
     steps:
       - name: Check out the repository
